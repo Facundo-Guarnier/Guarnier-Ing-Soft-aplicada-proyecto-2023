@@ -1,0 +1,40 @@
+entity Mensaje {
+	texto String
+	fecha LocalDate
+}
+
+entity Usuario {
+	alias String
+    nombre String
+    correo String
+    contrasenia String
+    descripcion String
+    admin Boolean
+}
+
+entity MensajePrivado {
+	texto String
+	fecha LocalDate
+}
+
+relationship OneToOne {
+	// Publicar mensaje
+	Mensaje{autor} to Usuario{mensajePublicado}
+
+	// Enviar mensaje privado
+	MensajePrivado{autor} to Usuario{mensajePrivadoEnviado}
+
+	// Recibir mensaje privado
+	MensajePrivado{destino} to Usuario{mensajePrivadoRecibido}
+
+}
+
+relationship OneToMany {
+	// Mencionar en un mensaje
+	Mensaje{menciones} to Usuario{mensajeMencionado}
+}
+
+relationship ManyToMany {
+	// Seguidores y seguidos de usuario
+	Usuario{siguiendo} to Usuario{seguidores}
+}
