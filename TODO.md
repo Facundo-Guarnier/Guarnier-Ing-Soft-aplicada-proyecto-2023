@@ -13,3 +13,6 @@ JHipster
 conexión.
 - Implementar un servidor de integración continua (Jenkins) que lea el
 repositorio y genere una imagen docker de la aplicación (Dockerhub)
+
+
+jhipster import-jdl jhipster-jdl.jdl --directory proyecto
