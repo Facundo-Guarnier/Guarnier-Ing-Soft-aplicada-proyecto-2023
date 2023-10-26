@@ -3,7 +3,7 @@ application {
 	config {
 		baseName microblog
 		applicationType monolith
-		packageName um.ing-soft
+		packageName um.ing_soft
 		authenticationType jwt
 		prodDatabaseType mysql
 		clientFramework angularX
