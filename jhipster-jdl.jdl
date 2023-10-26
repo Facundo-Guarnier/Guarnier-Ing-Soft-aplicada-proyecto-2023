@@ -1,3 +1,17 @@
+
+application {
+  config {
+    baseName myApp
+    applicationType monolith
+    packageName um.ing-soft
+    authenticationType jwt
+    prodDatabaseType mysql
+    clientFramework angularX
+  }
+  entities *
+}
+
+
 entity Mensaje {
 	texto String
 	fecha LocalDate
