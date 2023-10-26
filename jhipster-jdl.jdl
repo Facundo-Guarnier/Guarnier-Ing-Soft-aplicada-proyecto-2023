@@ -1,13 +1,15 @@
 
 application {
-  config {
-    baseName myApp
-    applicationType monolith
-    packageName um.ing-soft
-    authenticationType jwt
-    prodDatabaseType mysql
-    clientFramework angularX
-  }
+	config {
+		baseName microblog
+		applicationType monolith
+		packageName um.ing-soft
+		authenticationType jwt
+		prodDatabaseType mysql
+		clientFramework angularX
+		testFrameworks [cypress]
+		buildTool maven
+	}
   entities *
 }
 
@@ -33,13 +35,13 @@ entity MensajePrivado {
 
 relationship OneToOne {
 	// Publicar mensaje
-	Mensaje{autor} to Usuario{mensajePublicado}
+	Mensaje{autor(alias)} to Usuario{mensajePublicado}
 
 	// Enviar mensaje privado
-	MensajePrivado{autor} to Usuario{mensajePrivadoEnviado}
+	MensajePrivado{autor(alias)} to Usuario{mensajePrivadoEnviado}
 
 	// Recibir mensaje privado
-	MensajePrivado{destino} to Usuario{mensajePrivadoRecibido}
+	MensajePrivado{destino(alias)} to Usuario{mensajePrivadoRecibido}
 
 }
 
