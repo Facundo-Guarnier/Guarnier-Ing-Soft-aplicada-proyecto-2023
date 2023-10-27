@@ -47,10 +47,10 @@ relationship OneToOne {
 
 relationship OneToMany {
 	// Mencionar en un mensaje
-	Mensaje{menciones} to Usuario{mensajeMencionado}
+	Mensaje{menciones(alias)} to Usuario{mensajeMencionado}
 }
 
 relationship ManyToMany {
 	// Seguidores y seguidos de usuario
-	Usuario{siguiendo} to Usuario{seguidores}
+	Usuario{siguiendo(alias)} to Usuario{seguidores(alias)}
 }

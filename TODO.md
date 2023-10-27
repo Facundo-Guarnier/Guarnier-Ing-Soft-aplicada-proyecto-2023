@@ -1,4 +1,4 @@
-https://virtual.um.edu.ar/pluginfile.php/372313/mod_resource/content/1/Trabajo%20final%20-%20Ing%20de%20Software%20Aplicada.pdf 
+https://virtual.um.edu.ar/pluginfile.php/372313/mod_resource/content/1/Trabajo%20final%20-%20Ing%20de%20Software%20Aplicada.pdf
 
 https://github.com/jhipster/jdl-samples
 
@@ -8,11 +8,10 @@ https://github.com/jhipster/jdl-samples
 - Testeo con cypress
 - Gestion de logs con ELK (Logstash, Elasticsearch, Kibana)
 - Crear una aplicación progresiva en ionic que consuma una API del proyecto
-JHipster
+  JHipster
 - Convertir la aplicación Ionic en PWA permitiendo que pueda funcionar sin
-conexión.
+  conexión.
 - Implementar un servidor de integración continua (Jenkins) que lea el
-repositorio y genere una imagen docker de la aplicación (Dockerhub)
+  repositorio y genere una imagen docker de la aplicación (Dockerhub)
 
-
-jhipster import-jdl jhipster-jdl.jdl --directory proyecto
+jhipster import-jdl jhipster-jdl.jdl
