@@ -5,7 +5,6 @@ application {
 		applicationType monolith
 		packageName um.ing_soft
 		authenticationType jwt
-		prodDatabaseType mysql
 		clientFramework angularX
 		testFrameworks [cypress]
 		buildTool maven
